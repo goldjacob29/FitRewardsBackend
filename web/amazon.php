@@ -24,7 +24,7 @@
 	    "AssociateTag" => "ewbnu-20",
 	    "SearchIndex" => "All",
 	    "Keywords" => $keyword,
-	    "ResponseGroup" => "Images"
+	    "ResponseGroup" => "Images,ItemAttributes"
 	);
 
 	// Set current timestamp if not set
