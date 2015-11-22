@@ -15,5 +15,5 @@
 	  'amount' => $amount,
 	  'paymentMethodNonce' => $nonce
 	]);
-	echo(json_encode($result));
+	echo(json_encode($result->transaction));
 ?>
