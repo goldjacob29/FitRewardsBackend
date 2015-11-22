@@ -4,7 +4,8 @@
     "monolog/monolog": "~1.7",
     "twig/twig": "^1.19",
     "symfony/twig-bridge": "^2.7",
-    "braintree/braintree_php" : "3.7.0"
+    "braintree/braintree_php" : "3.7.0",
+    "aws/aws-sdk-php": "2.*"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
