@@ -24,7 +24,8 @@
 	    "AssociateTag" => "ewbnu-20",
 	    "SearchIndex" => "All",
 	    "Keywords" => $keyword,
-	    "ResponseGroup" => "Images,ItemAttributes"
+	    "ResponseGroup" => "Images,ItemAttributes",
+	    "MerchantId" => "Amazon"
 	);
 
 	// Set current timestamp if not set
@@ -71,6 +72,7 @@
 		$newitem = array();
 		$currenttitle = $itemsarray[$i]["ItemAttributes"]["Title"];
 		$smallimage = $itemsarray[$i]["ImageSets"]["ImageSet"][0]["ThumbnailImage"]["URL"];
+		$price = $itemsarray[$i]["ItemAttributes"]["ListPrice"]["Amount"];
 		$newitem["title"] = $currenttitle;
 		$newitem["image"] = $smallimage;
 		array_push($returnarray, $newitem);
