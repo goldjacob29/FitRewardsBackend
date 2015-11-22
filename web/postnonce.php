@@ -9,10 +9,11 @@
 	header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 	header("Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type");
 	$nonce = $_POST['nonce'];
+	$amount = $_POST['amount'];
 
 	$result = Braintree_Transaction::sale([
-	  'amount' => '100.00',
+	  'amount' => $amount,
 	  'paymentMethodNonce' => $nonce
 	]);
-	echo($result);
+	echo($result -> success . ' ' . $result->transaction->amount);
 ?>
