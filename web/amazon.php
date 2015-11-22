@@ -73,8 +73,11 @@
 		$currenttitle = $itemsarray[$i]["ItemAttributes"]["Title"];
 		$smallimage = $itemsarray[$i]["ImageSets"]["ImageSet"][0]["ThumbnailImage"]["URL"];
 		$price = $itemsarray[$i]["ItemAttributes"]["ListPrice"]["Amount"];
+		$asin = $itemsarray[$i]["ASIN"];
 		$newitem["title"] = $currenttitle;
 		$newitem["image"] = $smallimage;
+		$newitem["price"] = $price;
+		$newitem["asin"] = $asin;
 		array_push($returnarray, $newitem);
 	};
 	echo var_dump($returnarray);
