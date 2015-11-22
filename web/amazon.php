@@ -80,5 +80,5 @@
 		$newitem["asin"] = $asin;
 		array_push($returnarray, $newitem);
 	};
-	echo var_dump($returnarray);
+	echo json_encode($returnarray);
 ?>
