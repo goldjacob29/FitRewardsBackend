@@ -70,7 +70,9 @@
 	for ($i = 0; $i < $itemslength; $i++) {
 		$newitem = array();
 		$currenttitle = $itemsarray[$i]["ItemAttributes"]["Title"];
+		$smallimage = $itemsarray[$i]["ImageSets"]["ImageSet"][0]["ThumbnailImage"]["URL"];
 		$newitem["title"] = $currenttitle;
+		$newitem["image"] = $smallimage;
 		array_push($returnarray, $newitem);
 	};
 	echo var_dump($returnarray);
