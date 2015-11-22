@@ -67,9 +67,9 @@
 
 	$itemslength = count($itemsarray);
 
-	for ($i = 0; $i < $itemslength; i++) {
+	for ($i = 0; $i < $itemslength; $i++) {
 		$newitem = array();
-		$currenttitle = $itemsarray[i]["ItemAttributes"]["Title"];
+		$currenttitle = $itemsarray[$i]["ItemAttributes"]["Title"];
 		$newitem["title"] = $currenttitle;
 		array_push($returnarray, $newitem);
 	};
