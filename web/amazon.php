@@ -54,7 +54,7 @@
 	// Generate the signed URL
 	$request_url = 'http://'.$endpoint.$uri.'?'.$canonical_query_string.'&Signature='.rawurlencode($signature);
 
-	echo "Signed URL: \"".$request_url."\"";
+	// echo "Signed URL: \"".$request_url."\"";
 
 	$myXMLData = file_get_contents($request_url);
 
