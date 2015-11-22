@@ -59,5 +59,5 @@
 
 	$xml=simplexml_load_string($myXMLData);
 	$sexyarray = json_decode(json_encode($xml), true);
-	echo var_dump($sexyarray);
+	echo var_dump($sexyarray["Items"]);
 ?>
