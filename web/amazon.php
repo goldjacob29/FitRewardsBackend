@@ -58,5 +58,5 @@
 	$myXMLData = file_get_contents($request_url);
 
 	$xml=simplexml_load_string($myXMLData);
-	echo print_r($xml);
+	echo var_dump(json_decode(json_encode($xml), true));
 ?>
