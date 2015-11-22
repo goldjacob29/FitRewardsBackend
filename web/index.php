@@ -2,9 +2,9 @@
 
 require('../vendor/autoload.php');
 Braintree_Configuration::environment('sandbox');
-Braintree_Configuration::merchantId('use_your_merchant_id');
-Braintree_Configuration::publicKey('use_your_public_key');
-Braintree_Configuration::privateKey('use_your_private_key');
+Braintree_Configuration::merchantId('vy8vxfry49ydvw6x');
+Braintree_Configuration::publicKey('ghhmmmsctxvbkz7m');
+Braintree_Configuration::privateKey('72d92b61ab66470d32e9b2dda5d2caf2');
 
 echo 'hello world';
 
