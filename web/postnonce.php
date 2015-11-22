@@ -15,5 +15,6 @@
 	  'amount' => $amount,
 	  'paymentMethodNonce' => $nonce
 	]);
-	echo($result -> success . ' ' . $result->transaction->amount);
+	// echo($result -> success . ' ' . $result->transaction->amount);
+	echo($result);
 ?>
