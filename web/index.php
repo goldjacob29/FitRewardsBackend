@@ -1,6 +1,7 @@
 <?php
 
 require('../vendor/autoload.php');
+header("Access-Control-Allow-Origin: *");
 Braintree_Configuration::environment('sandbox');
 Braintree_Configuration::merchantId('vy8vxfry49ydvw6x');
 Braintree_Configuration::publicKey('ghhmmmsctxvbkz7m');
