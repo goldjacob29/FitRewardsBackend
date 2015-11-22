@@ -4,6 +4,7 @@
 	header("Access-Control-Allow-Credentials: true");
 	header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 	header("Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type");
+	$keyword = $_POST['keyword'];
 
 	// Your AWS Access Key ID, as taken from the AWS Your Account page
 	$aws_access_key_id = "AKIAIFG2QPIQP3K2UXGA";
@@ -22,7 +23,7 @@
 	    "AWSAccessKeyId" => "AKIAIFG2QPIQP3K2UXGA",
 	    "AssociateTag" => "ewbnu-20",
 	    "SearchIndex" => "All",
-	    "Keywords" => "blender",
+	    "Keywords" => $keyword,
 	    "ResponseGroup" => "Images,ItemAttributes,ItemIds,OfferListings,OfferSummary,Reviews"
 	);
 
@@ -58,5 +59,4 @@
 
 	$xml=simplexml_load_string($myXMLData);
 	echo var_dump($xml);
-
 ?>
