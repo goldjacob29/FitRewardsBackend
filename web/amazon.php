@@ -58,5 +58,5 @@
 	$myXMLData = file_get_contents($request_url);
 
 	$xml=simplexml_load_string($myXMLData);
-	echo var_dump(array($xml));
+	echo var_dump(array($xml)[0]["items"]);
 ?>
