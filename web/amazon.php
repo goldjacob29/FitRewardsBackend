@@ -59,5 +59,19 @@
 
 	$xml=simplexml_load_string($myXMLData);
 	$sexyarray = json_decode(json_encode($xml), true);
-	echo var_dump($sexyarray["Items"]["Item"][0]["ItemAttributes"]["Title"]);
+
+	$title = $sexyarray["Items"]["Item"][0]["ItemAttributes"]["Title"];
+
+	$returnarray = array();
+	$itemsarray = $sexyarray["Items"]["Item"];
+
+	$itemslength = count($itemsarray);
+
+	for ($i = 0; $i < $itemslength; i++) {
+		$newitem = array();
+		$currenttitle = $itemsarray[i]["ItemAttributes"]["Title"];
+		$newitem["title"] = $currenttitle;
+		array_push($returnarray, $newitem);
+	};
+	echo var_dump($returnarray);
 ?>
