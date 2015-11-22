@@ -15,7 +15,6 @@
 	  'amount' => $amount,
 	  'paymentMethodNonce' => $nonce
 	]);
-	$echores = array();
-	array_push($echores, array("amount" => $result->transaction->amount));
+	$echores = array("amount" => $result->transaction->amount, "status" => $result->transaction->status);
 	echo(json_encode($echores));
 ?>
