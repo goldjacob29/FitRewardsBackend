@@ -54,7 +54,7 @@
 
 	echo "Signed URL: \"".$request_url."\"";
 
-	$myXMLData = http_get($request_url);
+	$myXMLData = file_get_contents($request_url);
 
 	$xml=simplexml_load_string($myXMLData);
 	echo var_dump($xml);

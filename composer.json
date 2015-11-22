@@ -5,7 +5,8 @@
     "twig/twig": "^1.19",
     "symfony/twig-bridge": "^2.7",
     "braintree/braintree_php" : "3.7.0",
-    "aws/aws-sdk-php": "2.*"
+    "aws/aws-sdk-php": "2.*",
+    "ext-pecl_http" : "2.5.*"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
