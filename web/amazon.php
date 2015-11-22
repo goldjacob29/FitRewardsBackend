@@ -24,7 +24,7 @@
 	    "AssociateTag" => "ewbnu-20",
 	    "SearchIndex" => "All",
 	    "Keywords" => $keyword,
-	    "ResponseGroup" => "Images,ItemAttributes,ItemIds,OfferListings,OfferSummary,Reviews"
+	    "ResponseGroup" => "Images"
 	);
 
 	// Set current timestamp if not set
@@ -59,5 +59,5 @@
 
 	$xml=simplexml_load_string($myXMLData);
 	$sexyarray = json_decode(json_encode($xml), true);
-	echo var_dump($sexyarray["items"]);
+	echo var_dump($sexyarray);
 ?>
