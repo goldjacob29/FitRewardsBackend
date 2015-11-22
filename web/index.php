@@ -8,4 +8,6 @@ Braintree_Configuration::privateKey('use_your_private_key');
 
 echo 'hello world';
 
+echo($clientToken = Braintree_ClientToken::generate());
+
 ?>
